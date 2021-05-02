@@ -10,7 +10,11 @@ function App() {
           <Weather defaultCity="Amsterdam" />
         </div>
         <footer className="pl-1">
-          <a href="https://www.google.com" target="_blank" rel="noreferrer">
+          <a
+            href="https://github.com/AnaisPirson/shecode-weather-react-app-search"
+            target="_blank"
+            rel="noreferrer"
+          >
             Open-Source Code{" "}
           </a>
           by Anais Pirson
