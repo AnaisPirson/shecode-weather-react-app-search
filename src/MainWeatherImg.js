@@ -5,7 +5,8 @@ export default function MainWeatherImg(props) {
   return (
     <div className="MainWeatherImg">
       <img
-        src="../images/{props.dataIcon}.svg"
+        // src="../images/{props.dataIcon}.svg"
+        src="../images/09n.svg"
         width="300px"
         alt="main-Weather"
         className="main-weather-image img-fluid"
