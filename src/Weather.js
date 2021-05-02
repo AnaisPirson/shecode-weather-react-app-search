@@ -117,7 +117,7 @@ export default function Weather(props) {
                   type="checkbox"
                   className="custom-control-input"
                   id="customSwitch1"
-                  onChange={showUnit}
+                  onFocus={showUnit}
                 />
                 <label className="custom-control-label" htmlFor="customSwitch1">
                   °F
