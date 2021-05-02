@@ -39,7 +39,7 @@ export default function WeatherInfo(props) {
           </div>
           <div className="col me-2 details">
             <h5 className="details-h5">Details</h5>
-            <Details detailsInfo={props.data} />
+            <Details detailsInfo={props.data} units={props.units} />
           </div>
         </div>
       </div>
