@@ -1,0 +1,30 @@
+.detailsInfo {
+  background-color: #bcecd4;
+  font-size: 12px;
+  margin: 1%;
+  padding-top: 5%;
+  text-align: center;
+}
+
+hr {
+  display: inline-block;
+  margin: 0 0 5px 0;
+  width: 50px;
+}
+.details-h5 {
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.forecastInformation {
+  text-align: center;
+}
+
+.forecast-icon {
+  width: 50%;
+}
+.quote {
+  font-size: 10px;
+  text-align: center;
+}

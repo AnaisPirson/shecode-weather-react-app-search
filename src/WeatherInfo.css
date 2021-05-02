@@ -1,0 +1,29 @@
+.WeatherInfo ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+}
+
+.WeatherInfo .currentTemp {
+  font-size: 6rem;
+  color: #92817a;
+}
+.WeatherInfo .current-weather-description {
+  text-align: center;
+  font-size: 2rem;
+  color: #92817a;
+  line-height: 1;
+}
+.WeatherInfo .main-weather-image {
+  position: relative;
+  bottom: 8%;
+}
+.WeatherInfo .sunInfo {
+  max-width: 200px;
+}
+
+.details {
+  text-align: center;
+}

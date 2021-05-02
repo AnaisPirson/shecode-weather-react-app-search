@@ -1,0 +1,48 @@
+.App .container {
+  max-width: 800px;
+  font-family: "Lato";
+}
+
+.App .card-body {
+  margin: 5% auto 0;
+  background-color: rgba(136, 216, 176, 0.8);
+  color: #707070;
+  box-shadow: 5px 5px 5px rgba(112, 112, 112, 0.6);
+  border-radius: 5px;
+}
+
+.App h1 {
+  background: rgb(255, 210, 95);
+  background: radial-gradient(
+    circle,
+    rgba(255, 210, 95, 0.9475140397956058) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  border-radius: 50%;
+  font-family: "Architects Daughter", cursive;
+  margin: 1% 0;
+  text-align: center;
+}
+
+.App h2 {
+  color: #92817a;
+}
+
+.App h3 {
+  color: #d89088;
+  font-size: 1rem;
+}
+
+.App footer {
+  font-size: 12px;
+  margin-top: 1%;
+  font-family: monospace;
+  color: grey;
+  text-shadow: 0px 1px grey;
+}
+.App footer a {
+  color: orange;
+}
+.App footer a:hover {
+  color: rosybrown;
+}
