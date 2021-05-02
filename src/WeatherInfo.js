@@ -6,7 +6,7 @@ import SunInfo from "./SunInfo.js";
 import MainWeatherImg from "./MainWeatherImg.js";
 
 export default function WeatherInfo(props) {
-  if (props.units == "metric") {
+  if (props.units === "metric") {
     return (
       <div className="WeatherInfo">
         <h2
