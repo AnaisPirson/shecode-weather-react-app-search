@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo.js";
 import axios from "axios";
+import { SpinnerDotted } from "spinners-react";
 
 export default function Weather(props) {
   const apiKey = "d4c486d391c1e53132be6cfbb096c3a8";
@@ -129,6 +130,11 @@ export default function Weather(props) {
     let units = "metric";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(handleResponse);
-    return "...loading";
+    return (
+      <div className="Weather">
+        "...Loading"
+        <SpinnerDotted />
+      </div>
+    );
   }
 }
