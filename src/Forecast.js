@@ -45,8 +45,7 @@ export default function Forecast(props) {
               type="radio"
               name="forecastbtns"
               id="forecastDaily"
-              autoComplete="off"
-              checked
+              defaultChecked
             />{" "}
             Daily Forecast
           </label>
@@ -65,7 +64,7 @@ export default function Forecast(props) {
             {forecast.map(function (dailyForecast, index) {
               if (index < 5) {
                 return (
-                  <div className="col m-0 p-0">
+                  <div key={index} className="col m-0 p-0">
                     <ForecastCard
                       data={forecast}
                       index={index}

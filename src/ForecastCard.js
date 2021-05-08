@@ -43,7 +43,7 @@ export default function ForecastCard(props) {
           />
 
           <p className="card-text">
-            <small class="text-muted">
+            <small className="text-muted">
               {minTemperature()} °{getUnits()}/ {maxTemperature()} °{getUnits()}
             </small>
           </p>
