@@ -20,6 +20,7 @@ export default function DateFormat(props) {
       <h3 className="current-date m-0">
         {todayDate}, {todayTime}
       </h3>
+      {/* <p>Local time:</p> */}
     </div>
   );
 }

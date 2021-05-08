@@ -29,6 +29,7 @@ export default function Weather(props) {
       tempMax: response.data.main.temp_max,
       timestamp_sunrise: response.data.sys.sunrise,
       timestamp_sunset: response.data.sys.sunset,
+      coord: response.data.coord,
     });
   }
 

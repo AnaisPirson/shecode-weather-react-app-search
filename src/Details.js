@@ -1,5 +1,6 @@
 import React from "react";
 import "./Details.css";
+import Quotes from "./Quotes.js";
 
 export default function Details(props) {
   console.log(props.units);
@@ -76,9 +77,8 @@ export default function Details(props) {
             <p id="pressure">Pressure: {props.detailsInfo.pressure}</p>
           </div>
         </div>
-        <p className="quote">
-          Better wrap up warmly and watch out for that wind!
-        </p>
+
+        <Quotes />
       </div>
     );
   } else {

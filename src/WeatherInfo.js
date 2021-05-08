@@ -4,6 +4,7 @@ import "./WeatherInfo.css";
 import DateFormat from "./DateFormat.js";
 import SunInfo from "./SunInfo.js";
 import MainWeatherImg from "./MainWeatherImg.js";
+import Forecast from "./Forecast.js";
 
 export default function WeatherInfo(props) {
   if (props.units === "metric") {
@@ -32,16 +33,18 @@ export default function WeatherInfo(props) {
             </p>
 
             <MainWeatherImg dataIcon={props.data.icon} />
-            <small className="text-muted lastUpdated">
+            {/* <small className="text-muted lastUpdated">
               <i className="fas fa-redo update-arrow"></i> Last updated 3 mins
               ago
-            </small>
+            </small> */}
           </div>
           <div className="col me-2 details">
             <h5 className="details-h5">Details</h5>
             <Details detailsInfo={props.data} units={props.units} />
           </div>
         </div>
+
+        <Forecast units={props.units} coords={props.data.coord} />
       </div>
     );
   } else {
@@ -80,6 +83,7 @@ export default function WeatherInfo(props) {
             <Details detailsInfo={props.data} units={props.units} />
           </div>
         </div>
+        <Forecast units={props.units} coords={props.data.coord} />
       </div>
     );
   }
