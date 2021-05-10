@@ -1,4 +1,5 @@
 import React from "react";
+import "./SunInfo.css";
 
 export default function SunInfo(props) {
   let sunriseTime = new Date(

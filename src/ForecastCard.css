@@ -4,3 +4,6 @@
 .card-title {
   margin-bottom: 0;
 }
+.ForecastCard img {
+  max-height: 80px;
+}

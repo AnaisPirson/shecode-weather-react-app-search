@@ -1,7 +1,8 @@
 import React from "react";
+import "./MainWeatherImg.css";
 
 export default function MainWeatherImg(props) {
-  console.log(props.dataIcon);
+  // console.log(props.dataIcon);
 
   if (props.dataIcon !== null) {
     return (
@@ -9,7 +10,6 @@ export default function MainWeatherImg(props) {
         <img
           // src="../images/{props.dataIcon}.svg"
           src={"../images/" + props.dataIcon + ".svg"}
-          width="300px"
           alt="main-Weather"
           className="main-weather-image img-fluid"
           id="main-weather-icon"

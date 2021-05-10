@@ -10,9 +10,16 @@
   font-size: 6rem;
   color: #92817a;
 }
+
+@media (max-width: 720px) {
+  .WeatherInfo .currentTemp {
+    font-size: 4rem;
+  }
+}
+
 .WeatherInfo .current-weather-description {
   text-align: center;
-  font-size: 2rem;
+  /* font-size: 2rem; */
   color: #92817a;
   line-height: 1;
 }
