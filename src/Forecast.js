@@ -7,7 +7,7 @@ export default function Forecast(props) {
   const apiKey = "d4c486d391c1e53132be6cfbb096c3a8";
   let [loaded, setLoaded] = useState(false);
   let [forecast, setForecast] = useState(null);
-  let [forecastType, setForecastType] = useState();
+  let [forecastType, setForecastType] = useState(null);
 
   let units = props.units;
   //   let lat = 47;
@@ -39,17 +39,15 @@ export default function Forecast(props) {
   }
 
   function getForecastType(event) {
-    console.log(event.target.value);
+    event.preventDefault();
+    setForecastType(event.target.value);
+    console.log(forecastType);
   }
 
   if (loaded) {
     return (
       <div className="Forecast">
-        <div
-          className="btn-group btn-group-toggle"
-          data-toggle="buttons"
-          onClick={getForecastType}
-        >
+        <div className="btn-group btn-group-toggle" data-toggle="buttons">
           <label className="btn btn-outline-secondary active">
             <input
               type="radio"
@@ -57,6 +55,7 @@ export default function Forecast(props) {
               value="daily"
               id="forecastDaily"
               defaultChecked
+              onChange={getForecastType}
             />{" "}
             Daily Forecast
           </label>
@@ -67,6 +66,7 @@ export default function Forecast(props) {
               id="forecastHourly"
               autoComplete="off"
               value="hourly"
+              onChange={getForecastType}
             />{" "}
             Hourly Forecast
           </label>
