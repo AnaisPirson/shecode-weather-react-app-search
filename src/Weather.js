@@ -30,6 +30,7 @@ export default function Weather(props) {
       timestamp_sunrise: response.data.sys.sunrise,
       timestamp_sunset: response.data.sys.sunset,
       coord: response.data.coord,
+      timezone: response.data.timezone,
     });
   }
 

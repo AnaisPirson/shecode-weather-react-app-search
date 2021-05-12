@@ -7,7 +7,7 @@ export default function Forecast(props) {
   const apiKey = "d4c486d391c1e53132be6cfbb096c3a8";
   let [loaded, setLoaded] = useState(false);
   let [forecast, setForecast] = useState(null);
-  let [forecastType, setForecastType] = useState(null);
+  let [forecastType, setForecastType] = useState("daily");
 
   let units = props.units;
   //   let lat = 47;
@@ -33,40 +33,43 @@ export default function Forecast(props) {
   }
 
   function handleResponse(response) {
-    setForecast(response.data.daily);
+    // setForecast(response.data.daily);
+    setForecast(response.data);
     setLoaded(true);
     console.log(response);
   }
 
-  function getForecastType(event) {
-    event.preventDefault();
-    setForecastType(event.target.value);
-    console.log(forecastType);
+  function getForecastType(value) {
+    setForecastType(value);
   }
 
   if (loaded) {
     return (
       <div className="Forecast">
         <div className="btn-group btn-group-toggle" data-toggle="buttons">
-          <label className="btn btn-outline-secondary active">
+          <label
+            className="btn btn-outline-secondary active"
+            onClick={() => getForecastType("daily")}
+          >
             <input
               type="radio"
               name="forecastbtns"
               value="daily"
               id="forecastDaily"
               defaultChecked
-              onChange={getForecastType}
             />{" "}
             Daily Forecast
           </label>
-          <label className="btn btn-outline-secondary">
+          <label
+            className="btn btn-outline-secondary"
+            onClick={() => getForecastType("hourly")}
+          >
             <input
               type="radio"
               name="forecastbtns"
               id="forecastHourly"
               autoComplete="off"
               value="hourly"
-              onChange={getForecastType}
             />{" "}
             Hourly Forecast
           </label>
@@ -74,7 +77,7 @@ export default function Forecast(props) {
 
         <div className="card-group mt-1">
           <div className="row forecast-cards">
-            {forecast.map(function (dailyForecast, index) {
+            {forecast.daily.map(function (dailyForecast, index) {
               if (index < 5) {
                 return (
                   <div key={index} className="col m-0 p-0">
@@ -82,7 +85,7 @@ export default function Forecast(props) {
                       data={forecast}
                       index={index}
                       units={props.units}
-                      // type={getForecastType()}
+                      type={forecastType}
                     />{" "}
                   </div>
                 );
