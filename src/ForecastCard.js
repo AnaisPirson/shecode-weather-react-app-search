@@ -43,7 +43,7 @@ export default function ForecastCard(props) {
     return a;
   }
 
-  if (props.type == "daily") {
+  if (props.type === "daily") {
     return (
       <div className="ForecastCard">
         <div className="card">
